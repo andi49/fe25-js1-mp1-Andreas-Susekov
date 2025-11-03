@@ -1,3 +1,8 @@
+const color = 'rgb(168, 168, 235)'
+const Cusomwidth = '50px'
+const CustomBorder = '12px solid rgb(168, 168, 235)'
+const words = ['ett', 'två', 'tre','fyra','fem','sex','sju','åtta','nio','tio']
+
 for (let i = 1; i <= 5; i++) {
   const fakeh1 = document.createElement("h1");
   document.body.appendChild(fakeh1);
@@ -15,21 +20,21 @@ wrapper.classList.add("listWrapper");
 document.body.append(wrapper);
 
 
-for (let j = 1; j <= 1; j++) {
+function generateListOne() {
   const list = document.createElement("ol");
   wrapper.append(list);
   list.classList.add("centerList");
-  list.style.border = "12px solid pink";
+  list.style.border = `${CustomBorder}`;
 
-  for (let l = 0; l <= 12; l++) {
+  for (let l = 0; l <= 9; l++) {
     const listItems = document.createElement("li");
     list.appendChild(listItems);
     listItems.innerText = [l];
-    listItems.style.width = "50px";
+    listItems.style.width = `${Cusomwidth}`;
 
     if (l === 4) 
     {
-      listItems.style.backgroundColor = "pink";
+      listItems.style.backgroundColor = `${color}`;
       listItems.style.color = "white";
     }
     else if (l % 2 === 0) 
@@ -45,22 +50,22 @@ for (let j = 1; j <= 1; j++) {
 }   
 
 
-for (let j = 1; j <= 1; j++) {
+function generateListTwo() {
   const list = document.createElement("ol");
   wrapper.append(list);
   list.classList.add("centerList");
-  list.style.border = "12px solid pink";
+list.style.border = `${CustomBorder}`;
   list.style.textAlign = 'center'
 
-  for (let l = 12; l >= 0; l--) {
+  for (let l = 9; l >= 0; l--) {
     const listItems = document.createElement("li");
     list.appendChild(listItems);
     listItems.innerText = [l];
-    listItems.style.width = "50px";
+    listItems.style.width = `${Cusomwidth}`;
 
     if (l === 8) 
     {
-      listItems.style.backgroundColor = "pink";
+      listItems.style.backgroundColor = `${color}`
       listItems.style.color = "white";
     }
     else if (l % 2 === 0) 
@@ -75,24 +80,22 @@ for (let j = 1; j <= 1; j++) {
   }
 }   
 
-const words = ['ett', 'två', 'tre','fyra','fem','sex','sju','åtta','nio','tio']
-
-for (let j = 1; j <= 1; j++) {
+function generateListThree () {
   const list = document.createElement("ol");
   wrapper.append(list);
   list.classList.add("centerList");
-  list.style.border = "12px solid pink";
+list.style.border = `${CustomBorder}`;
 
   for (let l = 0; l < words.length; l++) {
     const listItems = document.createElement("li");
     list.appendChild(listItems);
     listItems.innerText = words[l];
-    listItems.style.width = "50px";
+    listItems.style.width = `${Cusomwidth}`;
     listItems.style.textAlign = 'right'
 
     if (l === 5) 
     {
-      listItems.style.backgroundColor = "pink";
+      listItems.style.backgroundColor = `${color}`
       listItems.style.color = "white";
     }
     else if (l % 2 === 0) 
@@ -106,3 +109,7 @@ for (let j = 1; j <= 1; j++) {
     }
   }
 }  
+
+generateListOne()
+generateListTwo()
+generateListThree()
