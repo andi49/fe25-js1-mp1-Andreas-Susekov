@@ -2,27 +2,6 @@ const color = 'rgb(168, 168, 235)'
 const Cusomwidth = '50px'
 const CustomBorder = '12px solid rgb(168, 168, 235)'
 const words = ['ett', 'två', 'tre','fyra','fem','sex','sju','åtta','nio','tio']
-const style = `
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.listWrapper {
-  display: flex;
-  justify-content: center;  
-  align-items: flex-start;  
-  gap: 30px;               
-}
-
-.centerList {
-  list-style: none;
-}
-`
-const styleSheet = document.createElement("style")
-styleSheet.textContent = style
-document.head.appendChild(styleSheet)
 
 for (let i = 1; i <= 5; i++) {
   const fakeh1 = document.createElement("h1");
@@ -50,7 +29,7 @@ function generateListOne() {
   for (let l = 0; l <= 9; l++) {
     const listItems = document.createElement("li");
     list.appendChild(listItems);
-    listItems.innerText = [l];
+    listItems.innerText = l;
     listItems.style.width = `${Cusomwidth}`;
 
     if (l === 4) 
