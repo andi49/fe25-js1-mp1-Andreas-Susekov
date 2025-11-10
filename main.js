@@ -3,11 +3,9 @@ const words = [ "ett","två","tre","fyra","fem","sex","sju","åtta","nio","tio"]
 for (let i = 1; i <= 5; i++) {
   const fakeh1 = document.createElement("h1");
   document.body.appendChild(fakeh1);
-  fakeh1.innerHTML = "Rad" + " " + [i];
-  fakeh1.style.textAlign = "center";
-  fakeh1.style.fontSize = i + "rem";
-  fakeh1.style.color = "blue";
-  fakeh1.style.margin = `${i + 20}px`;
+  fakeh1.classList.add('fakeH1')
+  fakeh1.innerHTML = `Rad${i}`
+  fakeh1.style.fontSize = `${i}rem`
   fakeh1.style.backgroundColor = `hsl(${i * 20 + 120}, 50%, 70%)`;
 }
 
@@ -18,7 +16,7 @@ document.body.append(wrapper);
 function generateList() {
   const list = document.createElement("ol");
   wrapper.append(list);
-  list.classList.add("centerList");
+  list.classList.add('centerList');
   list.classList.add('customBorder')
 
   return list;
