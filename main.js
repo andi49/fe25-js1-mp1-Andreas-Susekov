@@ -1,18 +1,4 @@
-const color = "rgb(168, 168, 235)";
-const customWidth = "50px";
-const customBorder = "12px solid rgb(168, 168, 235)";
-const words = [
-  "ett",
-  "två",
-  "tre",
-  "fyra",
-  "fem",
-  "sex",
-  "sju",
-  "åtta",
-  "nio",
-  "tio",
-];
+const words = [ "ett","två","tre","fyra","fem","sex","sju","åtta","nio","tio"];
 
 for (let i = 1; i <= 5; i++) {
   const fakeh1 = document.createElement("h1");
@@ -33,7 +19,7 @@ function generateList() {
   const list = document.createElement("ol");
   wrapper.append(list);
   list.classList.add("centerList");
-  list.style.border = `${customBorder}`;
+  list.classList.add('customBorder')
 
   return list;
 }
@@ -43,11 +29,11 @@ const list = generateList();
 for (let i = 0; i <= 9; i++) {
   const listItems = document.createElement("li");
   list.appendChild(listItems);
+  listItems.classList.add("listItems");
   listItems.innerText = i;
-  listItems.style.width = `${customWidth}`;
 
   if (i === 4) {
-    listItems.style.backgroundColor = `${color}`;
+    listItems.classList.add("listItem");
     listItems.style.color = "white";
   } else if (i % 2 === 0) {
     listItems.style.backgroundColor = "black";
@@ -62,12 +48,12 @@ const listTwo = generateList();
 for (let i = 9; i >= 0; i--) {
   const listItems = document.createElement("li");
   listTwo.appendChild(listItems);
+  listItems.classList.add("listItems");
   listItems.innerText = [i];
-  listItems.style.width = `${customWidth}`;
   list.style.textAlign = "center";
 
   if (i === 8) {
-    listItems.style.backgroundColor = `${color}`;
+    listItems.classList.add("listItems");
     listItems.style.color = "white";
   } else if (i % 2 === 0) {
     listItems.style.backgroundColor = "black";
@@ -82,12 +68,12 @@ const listThree = generateList();
 for (let i = 0; i < words.length; i++) {
   const listItems = document.createElement("li");
   listThree.appendChild(listItems);
+  listItems.classList.add("listItems");
   listItems.innerText = words[i];
-  listItems.style.width = `${customWidth}`;
   listItems.style.textAlign = "right";
 
   if (i === 5) {
-    listItems.style.backgroundColor = `${color}`;
+    listItems.classList.add("listItems");
     listItems.style.color = "white";
   } else if (i % 2 === 0) {
     listItems.style.backgroundColor = "black";

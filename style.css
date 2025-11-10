@@ -1,5 +1,3 @@
-
-
 *{
     margin: 0;
     padding: 0;
@@ -15,4 +13,14 @@
 
 .centerList {
   list-style: none;
+}
+
+.customBorder {
+  border: 12px solid rgb(168, 168, 235);
+}
+
+
+.listItems {
+  background-color: rgb(168, 168, 235);
+  width: 50px;
 }
