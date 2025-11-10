@@ -12,7 +12,6 @@ for (let i = 1; i <= 5; i++) {
   fakeh1.style.color = "blue";
   fakeh1.style.margin = `${i+20}px`;
   fakeh1.style.backgroundColor = `hsl(${i * 20 + 120}, 50%, 70%)`;
-  console.log(i)
 }
 
 const wrapper = document.createElement("div");
@@ -26,23 +25,25 @@ function generateListOne() {
   list.classList.add("centerList");
   list.style.border = `${customBorder}`;
 
-  for (let l = 0; l <= 9; l++) {
+  
+
+  for (let i = 0; i <= 9; i++) {
     const listItems = document.createElement("li");
     list.appendChild(listItems);
-    listItems.innerText = l;
+    listItems.innerText = i;
     listItems.style.width = `${cusomWidth}`;
 
-    if (l === 4) 
+    if (i === 4) 
     {
       listItems.style.backgroundColor = `${color}`;
       listItems.style.color = "white";
     }
-    else if (l % 2 === 0) 
+    else if (i % 2 === 0) 
     {
       listItems.style.backgroundColor = "black";
       listItems.style.color = "white";
     } 
-     else if (l % 2 === 1) 
+     else if (i % 2 === 1) 
     {
       listItems.style.backgroundColor = "white";
     }
@@ -54,26 +55,26 @@ function generateListTwo() {
   const list = document.createElement("ol");
   wrapper.append(list);
   list.classList.add("centerList");
-list.style.border = `${CustomBorder}`;
+list.style.border = `${customBorder}`;
   list.style.textAlign = 'center'
 
-  for (let l = 9; l >= 0; l--) {
+  for (let i = 9; i >= 0; i--) {
     const listItems = document.createElement("li");
     list.appendChild(listItems);
-    listItems.innerText = [l];
+    listItems.innerText = [i];
     listItems.style.width = `${cusomWidth}`;
 
-    if (l === 8) 
+    if (i === 8) 
     {
       listItems.style.backgroundColor = `${color}`
       listItems.style.color = "white";
     }
-    else if (l % 2 === 0) 
+    else if (i % 2 === 0) 
     {
       listItems.style.backgroundColor = "black";
       listItems.style.color = "white";
     } 
-     else if (l % 2 === 1) 
+     else if (i % 2 === 1) 
     {
       listItems.style.backgroundColor = "white";
     }
@@ -86,24 +87,24 @@ function generateListThree () {
   list.classList.add("centerList");
 list.style.border = `${customBorder}`;
 
-  for (let l = 0; l < words.length; l++) {
+  for (let i = 0; i < words.length; i++) {
     const listItems = document.createElement("li");
     list.appendChild(listItems);
-    listItems.innerText = words[l];
+    listItems.innerText = words[i];
     listItems.style.width = `${cusomWidth}`;
     listItems.style.textAlign = 'right'
 
-    if (l === 5) 
+    if (i === 5) 
     {
       listItems.style.backgroundColor = `${color}`
       listItems.style.color = "white";
     }
-    else if (l % 2 === 0) 
+    else if (i % 2 === 0) 
     {
       listItems.style.backgroundColor = "black";
       listItems.style.color = "white";
     } 
-     else if (l % 2 === 1) 
+     else if (i % 2 === 1) 
     {
       listItems.style.backgroundColor = "white";
     }
@@ -113,3 +114,4 @@ list.style.border = `${customBorder}`;
 generateListOne()
 generateListTwo()
 generateListThree()
+
