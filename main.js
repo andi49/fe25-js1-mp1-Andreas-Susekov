@@ -1,6 +1,6 @@
 const color = 'rgb(168, 168, 235)'
-const Cusomwidth = '50px'
-const CustomBorder = '12px solid rgb(168, 168, 235)'
+const cusomWidth = '50px'
+const customBorder = '12px solid rgb(168, 168, 235)'
 const words = ['ett', 'två', 'tre','fyra','fem','sex','sju','åtta','nio','tio']
 
 for (let i = 1; i <= 5; i++) {
@@ -24,13 +24,13 @@ function generateListOne() {
   const list = document.createElement("ol");
   wrapper.append(list);
   list.classList.add("centerList");
-  list.style.border = `${CustomBorder}`;
+  list.style.border = `${customBorder}`;
 
   for (let l = 0; l <= 9; l++) {
     const listItems = document.createElement("li");
     list.appendChild(listItems);
     listItems.innerText = l;
-    listItems.style.width = `${Cusomwidth}`;
+    listItems.style.width = `${cusomWidth}`;
 
     if (l === 4) 
     {
@@ -61,7 +61,7 @@ list.style.border = `${CustomBorder}`;
     const listItems = document.createElement("li");
     list.appendChild(listItems);
     listItems.innerText = [l];
-    listItems.style.width = `${Cusomwidth}`;
+    listItems.style.width = `${cusomWidth}`;
 
     if (l === 8) 
     {
@@ -84,13 +84,13 @@ function generateListThree () {
   const list = document.createElement("ol");
   wrapper.append(list);
   list.classList.add("centerList");
-list.style.border = `${CustomBorder}`;
+list.style.border = `${customBorder}`;
 
   for (let l = 0; l < words.length; l++) {
     const listItems = document.createElement("li");
     list.appendChild(listItems);
     listItems.innerText = words[l];
-    listItems.style.width = `${Cusomwidth}`;
+    listItems.style.width = `${cusomWidth}`;
     listItems.style.textAlign = 'right'
 
     if (l === 5) 
